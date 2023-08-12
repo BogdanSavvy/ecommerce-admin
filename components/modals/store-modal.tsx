@@ -41,12 +41,9 @@ export const StoreModal = () => {
       setLoading(true);
 
       const response = await axios.post("/api/stores", values);
-      console.log(
-        "🚀 ~ file: store-modal.tsx:43 ~ onSubmit ~ response:",
-        response.data,
-      );
-      
-      toast.success("Store created successfully.");
+
+      //? window.location.assign() - redirecting us and does a page refresh to make sure the store is added to the database
+      window.location.assign(`/${response.data.id}`);
     } catch (error) {
       toast.error("Oops, something went wrong.");
     } finally {

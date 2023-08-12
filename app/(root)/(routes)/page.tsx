@@ -14,11 +14,7 @@ const SetupPage = () => {
     }
   }, [isOpen, onOpen]);
 
-  return (
-    <div className="flex flex-col items-center justify-center gap-4 p-4">
-      Setup page
-    </div>
-  );
+  return null;
 };
 
 export default SetupPage;
