@@ -12,6 +12,7 @@ const Navbar = async () => {
     redirect("/sign-in");
   }
 
+  //?find all stores that belong userId
   const stores = await prismadb.store.findMany({
     where: {
       userId,
