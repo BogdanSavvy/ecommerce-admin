@@ -93,7 +93,7 @@ export async function DELETE(
       return new NextResponse("Billboard id is reqired", { status: 400 });
     }
 
-    const storeByUserId = await prismadb.store.deleteMany({
+    const storeByUserId = await prismadb.store.findFirst({
       where: {
         id: params.storeId,
         userId,
