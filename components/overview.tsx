@@ -29,4 +29,3 @@ export const Overview: React.FC<OverviewProps> = ({ data }) => {
     </ResponsiveContainer>
   );
 };
-
